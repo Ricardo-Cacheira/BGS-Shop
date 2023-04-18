@@ -82,4 +82,28 @@ public class PlayerVisuals : MonoBehaviour
         item = null;
     }
 
+    private void UnequipClothing(EClothing type)
+    {
+        switch (type)
+        {
+            case EClothing.Shirt:
+            shirtTorso.sprite = null;
+            shirtSleeveRight.sprite = shirtSleeveLeft.sprite = null;
+            break;
+
+            case EClothing.Pants:
+            pantsWaist.sprite = null;
+            pantLegRight.sprite = pantLegLeft.sprite = null;
+            break;
+
+            case EClothing.Shoes:
+            shoeRight.sprite = shoeLeft.sprite = null;
+            footRight.gameObject.SetActive(true);
+            footLeft.gameObject.SetActive(true);
+            break;
+
+            default: break;
+        }
+    }
+
 }

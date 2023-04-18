@@ -6,4 +6,5 @@ public class ClothingItem : ScriptableObject
 {
     public EClothing type;
     public int price;
+    public bool equipped;
 }
