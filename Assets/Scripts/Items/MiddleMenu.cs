@@ -5,6 +5,9 @@ using TMPro;
 
 public class MiddleMenu : MonoBehaviour
 {
+    public static Action<ClothingItem> Buy;
+    public static Action<ClothingItem> Sell;
+
     [SerializeField] private Image item;
     [SerializeField] private TextMeshProUGUI itemName;
     [SerializeField] private TextMeshProUGUI price;
@@ -46,6 +49,16 @@ public class MiddleMenu : MonoBehaviour
 
     public void OnClick()
     {
-        
+        if(isShopItem)
+            Buy?.Invoke(clothingItem);
+        else
+        {
+            Sell?.Invoke(clothingItem);
+            item.sprite = null;
+            item.gameObject.SetActive(false);
+            itemName.text = "";
+            price.text = "0";
+            button.enabled = false;
+        }
     }
 }

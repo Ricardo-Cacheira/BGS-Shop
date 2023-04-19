@@ -11,6 +11,8 @@ public class ItemButton : MonoBehaviour
     private ClothingItem item;
     private bool isShopItem;
 
+    public ClothingItem Item {get => item;}
+
     private void Awake()
     {
         button = GetComponent<Button>();

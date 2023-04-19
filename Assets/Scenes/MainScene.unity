@@ -30050,7 +30050,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c773d2bb2722a54eb11940b826cada4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
+  items:
+  - {fileID: 11400000, guid: 93ad2da5bd8c4af4f97522b95418be47, type: 2}
+  - {fileID: 11400000, guid: f4392f5173273044d913932ad7443350, type: 2}
+  - {fileID: 11400000, guid: 76a17012df570964db5f44b3adb88774, type: 2}
   buttonPrefab: {fileID: 6221391438334652407, guid: 9e5888d09dfb2eb4d837b5f3438ecee8, type: 3}
   grid: {fileID: 8734930}
   money: {fileID: 1685124134}
@@ -31121,6 +31124,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1322315965134505990, guid: 49ba36c9aada3a347806a8fc7aa01c5b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e325fa0a0eea3db45b46c94a9f7c7ce0, type: 3}
+    - target: {fileID: 1322315965596661859, guid: 49ba36c9aada3a347806a8fc7aa01c5b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e325fa0a0eea3db45b46c94a9f7c7ce0, type: 3}
     - target: {fileID: 1322315965711133360, guid: 49ba36c9aada3a347806a8fc7aa01c5b, type: 3}
       propertyPath: m_Name
       value: Player
