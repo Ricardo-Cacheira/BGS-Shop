@@ -6,6 +6,7 @@ public class PlayerInteractor : MonoBehaviour
 {
     private IInteractible currentObject;
 
+    //Track interactable objects in range of the player
     private void OnTriggerEnter2D(Collider2D other)
     {
         currentObject = other.GetComponent<IInteractible>();

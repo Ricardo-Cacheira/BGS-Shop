@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Expands on visuals for player specific needs
 public class PlayerVisuals : Visuals
 {
     [SerializeField] private PlayerInteractor interactor;

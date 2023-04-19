@@ -9,6 +9,7 @@ public enum EClothing
     Shoes    
 }
 
+// Handle Clothing for player and NPCs
 public class Visuals : MonoBehaviour
 {
     [Header("Current Clothes")]

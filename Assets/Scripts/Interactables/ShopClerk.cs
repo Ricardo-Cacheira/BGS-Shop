@@ -8,8 +8,6 @@ public class ShopClerk : MonoBehaviour, IInteractible
     [SerializeField] private Transform panel;
     private Vector3 panelSize;
 
-    public string InteractionPrompt => throw new System.NotImplementedException();
-
     public bool Interact(PlayerInteractor interactor)
     {
         if(shop.gameObject.activeInHierarchy)
@@ -27,6 +25,7 @@ public class ShopClerk : MonoBehaviour, IInteractible
         panel.localScale = Vector3.zero;
     }
 
+    //Used to show the greetings panel when the player gets close
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Player")

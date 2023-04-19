@@ -30,6 +30,7 @@ public class InventoryManager : MonoBehaviour
     void Start()
     {
         money.text = coins.ToString();
+        //Create Buttons with starting inventory items
         foreach (var item in items)
         {
             var button = (ItemButton)Instantiate(buttonPrefab, Vector3.zero, Quaternion.identity, grid.transform);
@@ -37,6 +38,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    //handle UI and player coins/inventory after buying an Item
     private void OnBuy(ClothingItem item)
     {
         if(item.price <= coins)
@@ -49,6 +51,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    //handle UI and player coins/inventory after selling an Item
     private void OnSell(ClothingItem item)
     {
         coins += item.price;
