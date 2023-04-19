@@ -1,5 +1,7 @@
 # BGS-Shop
- 
+
+Created in 48 hours
+
 CREDITS
 
 Code: Ricardo Cacheira
