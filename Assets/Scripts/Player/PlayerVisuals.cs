@@ -82,7 +82,7 @@ public class PlayerVisuals : MonoBehaviour
         item = null;
     }
 
-    private void UnequipClothing(EClothing type)
+    public void UnequipClothing(EClothing type)
     {
         switch (type)
         {
