@@ -28814,7 +28814,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &609788602
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28875,6 +28875,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 76a17012df570964db5f44b3adb88774, type: 2}
   buttonPrefab: {fileID: 6221391438334652407, guid: 9e5888d09dfb2eb4d837b5f3438ecee8, type: 3}
   grid: {fileID: 1240403290}
+  middleMenu: {fileID: 2049565735}
+  inventory: {fileID: 1584894735}
 --- !u!114 &609788604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29882,7 +29884,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1299873045}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2049565735}
+        m_TargetAssemblyTypeName: MiddleMenu, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1299873045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30000,7 +30014,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1584894734
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30037,8 +30051,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
-  buttonPrefab: {fileID: 0}
-  grid: {fileID: 0}
+  buttonPrefab: {fileID: 6221391438334652407, guid: 9e5888d09dfb2eb4d837b5f3438ecee8, type: 3}
+  grid: {fileID: 8734930}
+  money: {fileID: 1685124134}
 --- !u!114 &1584894736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30439,7 +30454,7 @@ GameObject:
   - component: {fileID: 1685124135}
   - component: {fileID: 1685124134}
   m_Layer: 5
-  m_Name: Price
+  m_Name: Money
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31012,13 +31027,14 @@ GameObject:
   - component: {fileID: 2049565732}
   - component: {fileID: 2049565734}
   - component: {fileID: 2049565733}
+  - component: {fileID: 2049565735}
   m_Layer: 5
   m_Name: MiddleMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2049565732
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31081,6 +31097,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049565731}
   m_CullTransparentMesh: 1
+--- !u!114 &2049565735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049565731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8576a13312fa14e87675810b1f9ba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 1894264454}
+  itemName: {fileID: 1852071097}
+  price: {fileID: 52975710}
+  button: {fileID: 1299873044}
+  buttonText: {fileID: 784887101}
 --- !u!1001 &1322315965829385099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31145,6 +31178,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1986935698245729830, guid: 96c2c37a743120d418f8305abd2444ed, type: 3}
+      propertyPath: shop
+      value: 
+      objectReference: {fileID: 609788603}
     - target: {fileID: 6615024802914572547, guid: 96c2c37a743120d418f8305abd2444ed, type: 3}
       propertyPath: m_Name
       value: ShopClerk

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShopClerk : MonoBehaviour, IInteractible
 {
+    [SerializeField] private Shop shop;
     [SerializeField] private Transform panel;
     private Vector3 panelSize;
 
@@ -11,8 +12,13 @@ public class ShopClerk : MonoBehaviour, IInteractible
 
     public bool Interact(PlayerInteractor interactor)
     {
-        Debug.Log("Opening Shop");
-        return true;
+        if(shop.gameObject.activeInHierarchy)
+            return false;
+        else
+        {
+            shop.gameObject.SetActive(true);
+            return true;
+        }
     }
 
     private void Awake()
