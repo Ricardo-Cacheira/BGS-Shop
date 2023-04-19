@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   icon: {fileID: 21300000, guid: 1806c735981bd2a4c9c883590047fa3f, type: 3}
-  price: 0
+  price: 20
   equipped: 0
   arm: {fileID: 21300000, guid: 9e5eb3da36b9c234eb106fab95e92921, type: 3}
   torso: {fileID: 21300000, guid: 30d6b18e84a482a478e025c66744d423, type: 3}

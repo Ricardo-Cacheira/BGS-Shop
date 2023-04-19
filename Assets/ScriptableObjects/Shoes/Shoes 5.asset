@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   icon: {fileID: 21300000, guid: 4e90e36e964e4fb42807fc1ab029ade3, type: 3}
-  price: 0
+  price: 15
   equipped: 0
   shoe: {fileID: 21300000, guid: e325fa0a0eea3db45b46c94a9f7c7ce0, type: 3}
