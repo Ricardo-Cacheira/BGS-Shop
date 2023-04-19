@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0794589ff92091e45a2fe2a4e5bdc71d, type: 3}
-  m_Name: NavyShorts
+  m_Name: White Shorts
   m_EditorClassIdentifier: 
   type: 1
+  icon: {fileID: 21300000, guid: cc7b9d47465ce044985dada609a6545e, type: 3}
   price: 0
-  leg: {fileID: 21300000, guid: 05bd9896754df9a4a897cc9c19e7700d, type: 3}
-  waist: {fileID: 21300000, guid: 0ba342a43b7d6f146ba108ef68e66a21, type: 3}
+  equipped: 0
+  leg: {fileID: 21300000, guid: 6f408eb07275bf7448bd3374e6d808c6, type: 3}
+  waist: {fileID: 21300000, guid: ee62211a604debc409ec4069ac7adbcb, type: 3}

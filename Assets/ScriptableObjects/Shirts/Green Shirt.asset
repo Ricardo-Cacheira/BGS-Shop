@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b0a2c44bfd27ac48be724b9817a611d, type: 3}
-  m_Name: BlueShirt
+  m_Name: Green Shirt
   m_EditorClassIdentifier: 
   type: 0
+  icon: {fileID: 21300000, guid: 3604af3bd34ed724b9c41099b4b78c80, type: 3}
   price: 0
-  arm: {fileID: 21300000, guid: ea9c61833907a594485a2e2f76a4e70f, type: 3}
-  torso: {fileID: 21300000, guid: f37f7eca00d7efe439cacb4a5ec4624b, type: 3}
+  equipped: 0
+  arm: {fileID: 21300000, guid: f31501e3ff4483340be883b2f73a6827, type: 3}
+  torso: {fileID: 21300000, guid: 48cfad1c4a508ba4f935d7a48a1c11e1, type: 3}
