@@ -83,9 +83,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3114539904272518783}
-  m_Text: 'Hello there!
-
-    Press ''E'' to shop'
+  m_Text: Hello there!
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -404,6 +402,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fcd27bbcd6991e4793d273430989ddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shirt: {fileID: 0}
+  pants: {fileID: 0}
+  shoes: {fileID: 0}
   item: {fileID: 0}
   shirtTorso: {fileID: 6615024802939616405}
   shirtSleeveRight: {fileID: 6615024802679143074}
@@ -735,6 +736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3618a2c101eb7a438c3d3d0d1fa2291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shop: {fileID: 0}
   panel: {fileID: 5543732545099377343}
 --- !u!61 &4405091760387244991
 BoxCollider2D:
