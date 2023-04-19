@@ -8,10 +8,6 @@ public class InventoryManager : MonoBehaviour
 {
     [SerializeField] private List<ClothingItem> items;
     [Space]
-    [SerializeField] private ClothingItem currentShirt;
-    [SerializeField] private ClothingItem currentPants;
-    [SerializeField] private ClothingItem currentShoes;
-    [Space]
     [SerializeField] private ItemButton buttonPrefab;
     [SerializeField] private GridLayoutGroup grid;
     [SerializeField] private TextMeshProUGUI money;
@@ -36,8 +32,7 @@ public class InventoryManager : MonoBehaviour
         money.text = coins.ToString();
         foreach (var item in items)
         {
-            var button = (ItemButton)Instantiate(buttonPrefab, Vector3.zero, Quaternion.identity);
-            button.transform.parent = grid.transform;
+            var button = (ItemButton)Instantiate(buttonPrefab, Vector3.zero, Quaternion.identity, grid.transform);
             button.Setup(item, false);
         }
     }
@@ -49,8 +44,7 @@ public class InventoryManager : MonoBehaviour
             coins -= item.price;
             money.text = coins.ToString();
             items.Add(item);
-            var button = (ItemButton)Instantiate(buttonPrefab, Vector3.zero, Quaternion.identity);
-            button.transform.parent = grid.transform;
+            var button = (ItemButton)Instantiate(buttonPrefab, Vector3.zero, Quaternion.identity, grid.transform);
             button.Setup(item, false);
         }
     }
@@ -72,27 +66,18 @@ public class InventoryManager : MonoBehaviour
         switch (item.type)
         {
             case EClothing.Shirt:
-            if(currentShirt.name == item.name)
-            {
+            if(visuals.Shirt.name == item.name)
                 visuals.UnequipClothing(item.type);
-                currentShirt = null;
-            }
             break;
 
             case EClothing.Pants:
-            if(currentPants.name == item.name)
-            {
+            if(visuals.Pants.name == item.name)
                 visuals.UnequipClothing(item.type);
-                currentPants = null;
-            }
             break;
 
             case EClothing.Shoes:
-            if(currentShoes.name == item.name)
-            {
+            if(visuals.Shoes.name == item.name)
                 visuals.UnequipClothing(item.type);
-                currentShoes = null;
-            }
             break;
 
             default: break;

@@ -2,116 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EClothing
+public class PlayerVisuals : Visuals
 {
-    Shirt,
-    Pants,
-    Shoes    
-}
+    [SerializeField] private PlayerInteractor interactor;
+    [SerializeField] private InventoryManager inventory;
+    [SerializeField] private Camera inventoryCamera;
 
-public class PlayerVisuals : MonoBehaviour
-{
-    [Header("Current Clothes")]
-    private Shirt shirt;
-    private Pants pants;
-    private Shoes shoes;
+    public Shirt Shirt {get => shirt;}
+    public Pants Pants {get => pants;}
+    public Shoes Shoes {get => shoes;}
 
-    [Header("New Item (For Testing)")]
-    public ClothingItem item;
 
-    [Header("Scene Objects")]
-    [SerializeField] private SpriteRenderer shirtTorso;
-    [SerializeField] private SpriteRenderer shirtSleeveRight;
-    [SerializeField] private SpriteRenderer shirtSleeveLeft;
-
-    [SerializeField] private SpriteRenderer pantsWaist;
-    [SerializeField] private SpriteRenderer pantLegRight;
-    [SerializeField] private SpriteRenderer pantLegLeft;
-    
-    [SerializeField] private SpriteRenderer shoeRight;
-    [SerializeField] private SpriteRenderer shoeLeft;
-    [SerializeField] private SpriteRenderer footRight;
-    [SerializeField] private SpriteRenderer footLeft;
-    
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.I) && !inventory.gameObject.activeInHierarchy)
+            OpenInventory();
+
+        if(Input.GetKeyDown(KeyCode.Escape) && inventory.gameObject.activeInHierarchy)
+            CloseInventory();
     }
 
-    //Testing in Editor
-    private void OnValidate()
+    private void OpenInventory()
     {
-        EquipClothing(item);
+        inventory.gameObject.SetActive(true);
+        inventoryCamera.gameObject.SetActive(true);
+        interactor.enabled = false;
+        ItemButton.itemEquip += EquipClothing;
     }
 
-    private void EquipClothing(ClothingItem newItem)
+    private void CloseInventory()
     {
-        if(newItem == null)
-            return;
-
-        switch (newItem.type)
-        {
-            case EClothing.Shirt:
-            shirt = (Shirt)newItem;
-            shirtTorso.sprite = shirt.torso;
-            shirtSleeveRight.sprite = shirtSleeveLeft.sprite = shirt.arm;
-            break;
-
-            case EClothing.Pants:
-            pants = (Pants)newItem;
-            pantsWaist.sprite = pants.waist;
-            pantLegRight.sprite = pantLegLeft.sprite = pants.leg;
-            break;
-
-            case EClothing.Shoes:
-            shoes = (Shoes)newItem;
-            shoeRight.sprite = shoeLeft.sprite = shoes.shoe;
-            footRight.gameObject.SetActive(false);
-            footLeft.gameObject.SetActive(false);
-            break;
-
-            default: break;
-        }
-
-        item = null;
+        inventory.gameObject.SetActive(false);
+        inventoryCamera.gameObject.SetActive(false);
+        interactor.enabled = true;
+        ItemButton.itemEquip -= EquipClothing;
     }
-
-    public void UnequipClothing(EClothing type)
-    {
-        switch (type)
-        {
-            case EClothing.Shirt:
-            shirtTorso.sprite = null;
-            shirtSleeveRight.sprite = shirtSleeveLeft.sprite = null;
-            break;
-
-            case EClothing.Pants:
-            pantsWaist.sprite = null;
-            pantLegRight.sprite = pantLegLeft.sprite = null;
-            break;
-
-            case EClothing.Shoes:
-            shoeRight.sprite = shoeLeft.sprite = null;
-            footRight.gameObject.SetActive(true);
-            footLeft.gameObject.SetActive(true);
-            break;
-
-            default: break;
-        }
-    }
-
-    [ContextMenu("RemoveAllClothes")]
-    private void RemoveAllClothes()
-    {
-        UnequipClothing(EClothing.Shirt);
-        UnequipClothing(EClothing.Pants);
-        UnequipClothing(EClothing.Shoes);
-    }
-
 }

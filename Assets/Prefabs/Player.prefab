@@ -1037,9 +1037,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1322315965122325601}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fcd27bbcd6991e4793d273430989ddc, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a44ef443ab81e84fb48afd266b40fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shirt: {fileID: 11400000, guid: 93ad2da5bd8c4af4f97522b95418be47, type: 2}
+  pants: {fileID: 11400000, guid: f4392f5173273044d913932ad7443350, type: 2}
+  shoes: {fileID: 11400000, guid: 76a17012df570964db5f44b3adb88774, type: 2}
   item: {fileID: 0}
   shirtTorso: {fileID: 1322315965702606630}
   shirtSleeveRight: {fileID: 1322315965408708881}
@@ -1051,6 +1054,9 @@ MonoBehaviour:
   shoeLeft: {fileID: 1322315965596661859}
   footRight: {fileID: 1322315965664871888}
   footLeft: {fileID: 1322315964537013787}
+  interactor: {fileID: 6092165257000955563}
+  inventory: {fileID: 0}
+  inventoryCamera: {fileID: 6622404350726336105}
 --- !u!1 &1322315965134505984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,7 +1130,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2d2814786a0011742b1e78c851d90655, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e325fa0a0eea3db45b46c94a9f7c7ce0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1466,7 +1472,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2d2814786a0011742b1e78c851d90655, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e325fa0a0eea3db45b46c94a9f7c7ce0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2098,7 +2104,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1625113351151054197}
   - component: {fileID: 6622404350726336105}
-  - component: {fileID: 9080342359386775604}
   m_Layer: 0
   m_Name: InventoryCamera
   m_TagString: MainCamera
@@ -2164,11 +2169,3 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &9080342359386775604
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2363999381571018601}
-  m_Enabled: 1

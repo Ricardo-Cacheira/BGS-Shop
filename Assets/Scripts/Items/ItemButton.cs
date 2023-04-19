@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class ItemButton : MonoBehaviour
 {
     public static Action<ClothingItem, bool> itemClicked;
+    public static Action<ClothingItem> itemEquip;
 
     [SerializeField] private Image icon;
     private Button button;
@@ -21,6 +22,7 @@ public class ItemButton : MonoBehaviour
     public void OnClick()
     {
         itemClicked?.Invoke(item, isShopItem);
+        itemEquip?.Invoke(item);
     }
 
     public void Setup(ClothingItem clothingItem, bool shopItem)

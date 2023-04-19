@@ -30248,9 +30248,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 93ad2da5bd8c4af4f97522b95418be47, type: 2}
   - {fileID: 11400000, guid: f4392f5173273044d913932ad7443350, type: 2}
   - {fileID: 11400000, guid: 76a17012df570964db5f44b3adb88774, type: 2}
-  currentShirt: {fileID: 11400000, guid: 93ad2da5bd8c4af4f97522b95418be47, type: 2}
-  currentPants: {fileID: 11400000, guid: f4392f5173273044d913932ad7443350, type: 2}
-  currentShoes: {fileID: 11400000, guid: 76a17012df570964db5f44b3adb88774, type: 2}
   buttonPrefab: {fileID: 6221391438334652407, guid: 9e5888d09dfb2eb4d837b5f3438ecee8, type: 3}
   grid: {fileID: 8734930}
   money: {fileID: 1685124134}
@@ -30787,7 +30784,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fcd27bbcd6991e4793d273430989ddc, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a44ef443ab81e84fb48afd266b40fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1808839869
@@ -31333,14 +31330,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1322315965134505990, guid: 49ba36c9aada3a347806a8fc7aa01c5b, type: 3}
-      propertyPath: m_Sprite
+    - target: {fileID: 1322315965122325607, guid: 49ba36c9aada3a347806a8fc7aa01c5b, type: 3}
+      propertyPath: inventory
       value: 
-      objectReference: {fileID: 21300000, guid: e325fa0a0eea3db45b46c94a9f7c7ce0, type: 3}
-    - target: {fileID: 1322315965596661859, guid: 49ba36c9aada3a347806a8fc7aa01c5b, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e325fa0a0eea3db45b46c94a9f7c7ce0, type: 3}
+      objectReference: {fileID: 1584894735}
     - target: {fileID: 1322315965711133360, guid: 49ba36c9aada3a347806a8fc7aa01c5b, type: 3}
       propertyPath: m_Name
       value: Player

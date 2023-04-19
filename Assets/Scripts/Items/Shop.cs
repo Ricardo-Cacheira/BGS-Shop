@@ -15,8 +15,7 @@ public class Shop : MonoBehaviour
     {
         foreach (var item in items)
         {
-            var button = (ItemButton)Instantiate(buttonPrefab, Vector3.zero, Quaternion.identity);
-            button.transform.parent = grid.transform;
+            var button = (ItemButton)Instantiate(buttonPrefab, Vector3.zero, Quaternion.identity, grid.transform);
             button.Setup(item, true);
         }
     }
