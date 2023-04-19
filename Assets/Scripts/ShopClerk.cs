@@ -2,10 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShopClerk : MonoBehaviour
+public class ShopClerk : MonoBehaviour, IInteractible
 {
     [SerializeField] private Transform panel;
     private Vector3 panelSize;
+
+    public string InteractionPrompt => throw new System.NotImplementedException();
+
+    public bool Interact(PlayerInteractor interactor)
+    {
+        Debug.Log("Opening Shop");
+        return true;
+    }
 
     private void Awake()
     {

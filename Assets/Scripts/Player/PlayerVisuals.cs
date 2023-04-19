@@ -106,4 +106,12 @@ public class PlayerVisuals : MonoBehaviour
         }
     }
 
+    [ContextMenu("RemoveAllClothes")]
+    private void RemoveAllClothes()
+    {
+        UnequipClothing(EClothing.Shirt);
+        UnequipClothing(EClothing.Pants);
+        UnequipClothing(EClothing.Shoes);
+    }
+
 }
